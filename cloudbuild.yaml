@@ -5,3 +5,6 @@ steps:
   env:
   - 'LT_USERNAME=${_LT_USERNAME}'
   - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
+- name: 'busybox'
+  entrypoint: 'wget'
+  args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
