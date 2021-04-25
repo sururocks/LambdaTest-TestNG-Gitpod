@@ -11,7 +11,7 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
-  args: ['./LT_Linux/LT']
+  args: ["./workspace/LT_Linux/LT"]
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
