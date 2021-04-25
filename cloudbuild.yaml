@@ -5,6 +5,8 @@ steps:
 - name: 'bash'
   args: ['sh', 'startTunnel.sh']
 - name: 'bash'
+  args: ['ps', 'aux', '|', 'grep', 'LT']
+- name: 'bash'
   args: ['unzip', 'LT_Linux.zip']
 - name: 'bash'
   args: ['ls']
