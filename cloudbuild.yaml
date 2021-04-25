@@ -8,3 +8,7 @@ steps:
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
+steps:
+- name: 'bash'
+  args: ['unzip', 'LT_Linux.zip']
+
