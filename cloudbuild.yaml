@@ -3,9 +3,9 @@ steps:
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
 - name: 'bash'
-  args: 
-    - ['unzip', 'LT_Linux.zip']
-    - ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose',  '--mitm', '--load-balanced']
+  args: ['unzip', 'LT_Linux.zip']
+- name: 'bash'
+  args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose',  '--mitm', '--load-balanced']
 - name: 'maven'
   entrypoint: 'mvn'
   args: ['test', '-P', 'single']
