@@ -1,14 +1,12 @@
 steps:
+- name: 'busybox'
+  entrypoint: 'wget'
+  args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
+- name: 'bash'
+  args: ['unzip', 'LT_Linux.zip']
 - name: 'maven'
   entrypoint: 'mvn'
   args: ['test', '-P', 'single']
   env:
   - 'LT_USERNAME=${_LT_USERNAME}'
   - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
-- name: 'busybox'
-  entrypoint: 'wget'
-  args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
-steps:
-- name: 'bash'
-  args: ['unzip', 'LT_Linux.zip']
-
