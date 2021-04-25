@@ -7,6 +7,10 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
+  args: ['unzip', 'LT_Linux.zip']
+- name: 'bash'
+  args: ['./LT']
+- name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
   entrypoint: 'mvn'
