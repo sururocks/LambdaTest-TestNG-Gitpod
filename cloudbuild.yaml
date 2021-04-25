@@ -2,15 +2,12 @@ steps:
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
-  args:
-  - 'unzip LT_Linux.zip'
-  - 'ls'
 - name: 'bash'
   args: ['unzip', 'LT_Linux.zip']
 - name: 'bash'
   args: ['ls']
+- name: 'bash'
+  args: ['pwd']
 - name: 'bash'
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose',  '--mitm', '--load-balanced']
 - name: 'maven'
