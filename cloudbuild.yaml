@@ -7,7 +7,7 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
-  args: ['pwd']
+  args: ['ps, 'aux', '|', 'grep', 'LT']
 - name: 'bash'
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose',  '--mitm', '--load-balanced']
 - name: 'maven'
