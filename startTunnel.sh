@@ -1,3 +1,4 @@
+#!/bin/sh
 mkdir LT_Linux
 wget "https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip" -P LT_Linux/
 unzip -o LT_Linux/LT_Linux.zip -d LT_Linux
