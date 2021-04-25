@@ -7,7 +7,7 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
-  args: ['ps, 'aux', '|', 'grep', 'LT']
+  args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
   entrypoint: 'mvn'
   args: ['test', '-P', 'single']
