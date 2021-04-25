@@ -3,7 +3,7 @@ steps:
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
 - name: 'bash'
-  args: ['unzip', 'LT_Linux.zip']
+  args: ['sh', 'startTunnel.sh']
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
