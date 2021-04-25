@@ -2,7 +2,6 @@ steps:
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
-steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
