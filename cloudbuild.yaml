@@ -11,7 +11,9 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
-  args: ["./workspace/LT_Linux/LT"]
+  args: ['chmod', '755', 'LT']
+- name: 'bash'
+  args: ["./LT"]
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
