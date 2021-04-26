@@ -11,6 +11,8 @@ steps:
 - name: 'bash'
   args: ['ls']
 - name: 'bash'
+  args: ['pwd']
+- name: 'bash'
   args: ['chmod', '755', 'LT']
 - name: 'bash'
   args: ["./LT"]
