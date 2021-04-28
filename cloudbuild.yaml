@@ -1,4 +1,6 @@
 steps:
+- name: 'ubuntu'
+  args: ['echo', 'inside ubuntu']
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
@@ -14,7 +16,7 @@ steps:
   args: ['pwd']
 - name: 'bash'
   args: ['chmod', '755', 'LT']
-- name: 'bash'
+- name: 'ubuntu'
   args: ["./LT"]
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
