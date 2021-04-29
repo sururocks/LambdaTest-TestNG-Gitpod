@@ -20,9 +20,3 @@ steps:
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
-- name: 'maven'
-  entrypoint: 'mvn'
-  args: ['test', '-P', 'single']
-  env:
-  - 'LT_USERNAME=${_LT_USERNAME}'
-  - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
