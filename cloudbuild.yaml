@@ -17,7 +17,7 @@ steps:
 - name: 'bash'
   args: ['chmod', '755', 'LT']
 - name: 'ubuntu'
-  args: ["./LT"]
+  args: ["./startTunnel.sh"]
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
