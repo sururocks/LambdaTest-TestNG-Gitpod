@@ -17,7 +17,7 @@ steps:
 - name: 'bash'
   args: ['chmod', '755', 'LT']
 - name: 'ubuntu'
-  args: ['sh', 'startTunnel.sh']
+  args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
