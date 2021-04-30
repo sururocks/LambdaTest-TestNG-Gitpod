@@ -21,7 +21,7 @@ steps:
 - name: 'ubuntu'
   args: ['apt-get', 'upgrade', '-y']
 - name: 'ubuntu'
-  args: ['install', 'ca-certificates']
+  args: ['apt', 'install', 'ca-certificates']
 - name: 'ubuntu'
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 - name: 'bash'
