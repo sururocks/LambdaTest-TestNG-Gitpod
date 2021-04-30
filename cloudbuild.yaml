@@ -1,6 +1,7 @@
 steps:
 - name: gcr.io/cloud-builders/docker
-  args: ['run', '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '-user', '${_LT_USERNAME}', '-key', '${_LT_ACCESS_KEY}', '-infoAPIPort', '15000', '--tunnelName', 'GCloud']
+  args: ['run', '-it', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '-user', '${_LT_USERNAME}', '-key', '${_LT_ACCESS_KEY}', '-infoAPIPort', '15000', '--tunnelName', 'GCloud']
+  timeout: 500s
 #- name: jwilder/dockerize:0.6.1
 #  args: ['dockerize', '-timeout=60s', '-wait=tcp://lt:15000']
 - name: 'ubuntu'
@@ -22,17 +23,6 @@ steps:
   args: ['chmod', '755', 'LT']
 - name: 'ubuntu'
   args: ['apt-get', 'update']
-- name: gcr.io/cloud-builders/docker
-  args: ['run', '-d', '--name=postgres', '--network=cloudbuild', 'postgres']
-- name: jwilder/dockerize:0.6.1
-  args: ['dockerize', '-timeout=60s', '-wait=tcp://postgres:5432']
-# use postgres here
-- name: postgres
-  args: ['psql', '--host=postgres', '--user=postgres', '--command', 'SELECT * FROM INFORMATION_SCHEMA.Tables']
-# cloud-build-local don't clean `docker run -d`-ed container
-- name: gcr.io/cloud-builders/docker
-  args: ['rm', '--force', 'postgres']
-  args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 #- name: 'ubuntu'
 #  args: ['dpkg-reconfigure', 'ca-certificates']
 #- name: 'ubuntu'
