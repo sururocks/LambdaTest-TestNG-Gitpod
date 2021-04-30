@@ -6,7 +6,7 @@
 	<test name="Test1">
 		<parameter name="browser" value="Chrome" />
 		<parameter name="version" value="85.0" />
-		<parameter name="platform" value="macOS Catalina" />
+		<parameter name="platform" value="win10" />
 		<classes>
 			<class name="com.lambdatest.Tests.ParallelTest" />
 		</classes>
@@ -14,17 +14,17 @@
 	
 	<test name="Test2">
 		<parameter name="browser" value="Firefox" />
-		<parameter name="version" value="73.0" />
-		<parameter name="platform" value="Windows 10" />
+		<parameter name="version" value="85.0" />
+		<parameter name="platform" value="win10" />
 		<classes>
 			<class name="com.lambdatest.Tests.ParallelTest" />
 		</classes>
 	</test>
 	
 	<test name="Test3">
-		<parameter name="browser" value="Safari" />
-		<parameter name="version" value="13.0" />
-		<parameter name="platform" value="macOS Catalina" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="version" value="84.0" />
+		<parameter name="platform" value="win10" />
 		<classes>
 			<class name="com.lambdatest.Tests.ParallelTest" />
 		</classes>

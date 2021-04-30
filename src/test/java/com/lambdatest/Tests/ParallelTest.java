@@ -50,7 +50,8 @@ public class ParallelTest {
 		System.out.println("capabilities" + capabilities);
 
 		// Launch remote browser and set it as the current thread
-		String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
+		String gridURL = "http://surendran:bk8jEknrHwqnTQvJPgF3yObeQE0Z44f1S1f3oCnJw6f53zoSbf@localhost:4449/wd/hub";
+		// String gridURL = "https://" + username + ":" + accessKey + "@stage-hub.lambdatest.com/wd/hub";
 		try {
 			driver = new RemoteWebDriver(new URL(gridURL), capabilities);
 		} catch (Exception e) {
