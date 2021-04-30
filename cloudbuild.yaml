@@ -19,9 +19,9 @@ steps:
 - name: 'ubuntu'
   args: ['apt-get', 'update']
 - name: 'ubuntu'
-  args: ['apt-get', 'install', '-y', 'ca-certificates']
-- name: 'ubuntu'
   args: ['dpkg-reconfigure', 'ca-certificates']
+- name: 'ubuntu'
+  args: ['apt-get', 'install', '-y', 'ca-certificates']
 - name: 'ubuntu'
   args: ['update-ca-certificates']
 - name: 'ubuntu'
