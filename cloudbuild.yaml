@@ -8,8 +8,6 @@ steps:
 #  args: ['-m', 'http.server', '14500']
 - name: 'ubuntu'
   args: ['sleep', '20']
-- name: 'bash'
-  args: ['python', '-m', 'http.server', '14500', '&']
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
