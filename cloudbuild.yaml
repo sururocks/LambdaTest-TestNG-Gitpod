@@ -18,8 +18,11 @@ steps:
   args: ['chmod', '755', 'LT']
 - name: 'ubuntu'
   args: ['apt-get', 'update']
+- name: 'ubuntu'
   args: ['apt-get', 'upgrade', '-y']
+- name: 'ubuntu'
   args: ['update-ca-certificates']
+- name: 'ubuntu'
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 - name: 'bash'
   args: ['ps', 'aux', '|', 'grep', 'LT']
