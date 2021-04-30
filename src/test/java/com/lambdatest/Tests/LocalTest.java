@@ -35,12 +35,12 @@ public class LocalTest {
     capability.setCapability("name", "TestNG Single");
     capability.setCapability("tunnel", true);
     capability.setCapability("tunnelName", "GCloud");
-    capability.setCapability("network", true);
-    capability.setCapability("video", true);
-    capability.setCapability("console", true);
-    capability.setCapability("visual", true);
+    //capability.setCapability("network", false);
+    //capability.setCapability("video", true);
+    //capability.setCapability("console", false);
+    //capability.setCapability("visual", false);
 
-    String gridURL = "http://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
+    String gridURL = "https://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
     try {
       driver = new RemoteWebDriver(new URL(gridURL), capability);
     } catch (Exception e) {
