@@ -1,6 +1,10 @@
 steps:
+- name: gcr.io/cloud-builders/docker
+  args: ['run', '-d', '--name=lt', '--network=cloudbuild', 'lambdatest/tunnel', '-user', '${_LT_USERNAME}', '-key', '${_LT_ACCESS_KEY}', '-infoAPIPort', '15000', '--tunnelName', 'GCloud']
+- name: jwilder/dockerize:0.6.1
+  args: ['dockerize', '-timeout=60s', '-wait=tcp://lt:15000']
 - name: 'ubuntu'
-  args: ['echo', 'inside ubuntu']
+  args: ['sleep', '5']
 - name: 'busybox'
   entrypoint: 'wget'
   args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
