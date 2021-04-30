@@ -8,33 +8,8 @@ steps:
 #  args: ['-m', 'http.server', '14500']
 - name: 'ubuntu'
   args: ['sleep', '20']
-- name: 'busybox'
-  entrypoint: 'wget'
-  args: ['-O', 'LT_Linux.zip', 'https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip']
-- name: 'bash'
-  args: ['unzip', 'LT_Linux.zip']
-- name: 'bash'
-  args: ['sh', 'startTunnel.sh']
-- name: 'bash'
-  args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'bash'
   args: ['ls']
-- name: 'bash'
-  args: ['pwd']
-- name: 'bash'
-  args: ['chmod', '755', 'LT']
-- name: 'ubuntu'
-  args: ['apt-get', 'update']
-#- name: 'ubuntu'
-#  args: ['dpkg-reconfigure', 'ca-certificates']
-#- name: 'ubuntu'
-#  args: ['apt-get', 'install', '-y', 'ca-certificates']
-#- name: 'ubuntu'
-#  args: ['update-ca-certificates']
-- name: 'ubuntu'
-  args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
-- name: 'bash'
-  args: ['ps', 'aux', '|', 'grep', 'LT']
 - name: 'maven'
   entrypoint: 'mvn'
   args: ['test', '-P', 'single']
