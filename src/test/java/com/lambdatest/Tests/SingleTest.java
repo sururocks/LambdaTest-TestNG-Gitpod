@@ -31,14 +31,16 @@ public class SingleTest {
 		capability.setCapability(CapabilityType.BROWSER_NAME, browser);
 		capability.setCapability(CapabilityType.VERSION, version);
 		capability.setCapability(CapabilityType.PLATFORM, platform);
-		capability.setCapability("build", "TestNG Single Test");
+		capability.setCapability("build", "TestNG Single Test1");
 		capability.setCapability("name", "TestNG Single");
 		capability.setCapability("network", true);
 		capability.setCapability("video", true);
 		capability.setCapability("console", true);
 		capability.setCapability("visual", true);
 
-		String gridURL = "http://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
+		String gridURL = "http://surendran:bk8jEknrHwqnTQvJPgF3yObeQE0Z44f1S1f3oCnJw6f53zoSbf@localhost:4449/wd/hub";
+
+		//String gridURL = "http://" + username + ":" + accessKey + "@hub.lambdatest.com/wd/hub";
 		try {
 			driver = new RemoteWebDriver(new URL(gridURL), capability);
 		} catch (Exception e) {

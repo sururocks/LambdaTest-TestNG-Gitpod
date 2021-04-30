@@ -6,7 +6,7 @@
 	<test name="Test1">
 		<parameter name="browser" value="Chrome" />
 		<parameter name="version" value="85.0" />
-		<parameter name="platform" value="macOS Catalina" />
+		<parameter name="platform" value="win10" />
 		<classes>
 			<class name="com.lambdatest.Tests.SingleTest" />
 			
