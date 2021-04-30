@@ -11,6 +11,10 @@
 	<description>A sample Maven project that demonstrates how to integrate Lambdatest with WebDriver tests
         that run using TestNG
     </description>
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
 
 	<dependencies>
 		<dependency>
