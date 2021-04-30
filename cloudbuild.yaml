@@ -20,10 +20,10 @@ steps:
   args: ['apt-get', 'update']
 - name: 'ubuntu'
   args: ['dpkg-reconfigure', 'ca-certificates']
-- name: 'ubuntu'
-  args: ['apt-get', 'install', '-y', 'ca-certificates']
-- name: 'ubuntu'
-  args: ['update-ca-certificates']
+#- name: 'ubuntu'
+#  args: ['apt-get', 'install', '-y', 'ca-certificates']
+#- name: 'ubuntu'
+#  args: ['update-ca-certificates']
 - name: 'ubuntu'
   args: ['./LT', '--user', '${_LT_USERNAME}', '--key', '${_LT_ACCESS_KEY}', '--tunnelName', 'GCloud', '--env', 'prod', '--verbose', '--mitm', '--load-balanced', '&']
 - name: 'bash'
