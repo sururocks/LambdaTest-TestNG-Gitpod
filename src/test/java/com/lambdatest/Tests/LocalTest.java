@@ -58,13 +58,13 @@ public class LocalTest {
         driver.findElement(By.xpath("//pre[contains(text(),'status\":\"SUCCESS')]"));
         status = "passed";
       } catch (Exception e) {
-        e.printStackTrace();
+//         e.printStackTrace();
       }
       AssertJUnit.assertEquals("tunnel is not started", status, "passed");
     } catch (Exception e) {
-      e.printStackTrace();
+//       e.printStackTrace();
     } catch (Error e) {
-      e.printStackTrace();
+//       e.printStackTrace();
     }
 
   }
